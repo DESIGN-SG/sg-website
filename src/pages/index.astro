@@ -1,29 +1,16 @@
 ---
-// Component Imports
-import MyFirstReact from '../components/MyFirstReact.jsx';
+import MyFirstReact from '../components/MyFirstReact';
 ---
 
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
 	</head>
 	<body>
 		<main>
-			<MyFirstReact />
-			</Counter>
+			<MyFirstReact client:load />
 		</main>
 	</body>
 </html>
