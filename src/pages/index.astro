@@ -1,6 +1,7 @@
 ---
 import MyFirstReact from '../components/MyFirstReact';
 import MySecondReact from '../components/MySecondReact';
+import MyThirdReact from '../components/MyThirdReact';
 ---
 
 <html lang="ja">
@@ -11,9 +12,11 @@ import MySecondReact from '../components/MySecondReact';
 	</head>
 	<body>
 		<main>
-			<MyFirstReact client:load />
-			<MySecondReact>第一章</MySecondReact>
-			<MySecondReact>第二章</MySecondReact>
+			<!-- <MyFirstReact client:load /> -->
+			<!-- <MySecondReact>第一章</MySecondReact> -->
+			<!-- <MySecondReact>第二章</MySecondReact> -->
+			<MyThirdReact buttonLabel="クリック" messageText="どうも" client:load />
+			<MyThirdReact buttonLabel="押す" messageText="こんちわ" client:load />
 		</main>
 	</body>
 </html>
