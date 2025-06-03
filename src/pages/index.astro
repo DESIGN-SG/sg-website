@@ -4,16 +4,19 @@ import {
   MySecondReact,
   MyThirdReact,
 	MyFourthReact,
-	HeadContent 
+	HeadContent,
+	MetaTags
 } from '../components';
 ---
 
 <html lang="ja">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<HeadContent />
 	</head>
+	<style>
+		.material-symbols-outlined{font-variation-settings:FILL 0,wght 400,GRAD 0,opsz 16;}
+	</style>
 	<body>
 		<main>
 			<!-- <MyFirstReact client:load /> -->
@@ -22,7 +25,7 @@ import {
 			<MyThirdReact buttonLabel="クリック" messageText="どうも" client:load />
 			<MyThirdReact buttonLabel="押す" messageText="こんちわ" client:load />
 			<MyFourthReact />
-			<HeadContent />
+			<p><span class="material-symbols-outlined">keyboard_arrow_down</span></p>
 		</main>
 	</body>
 </html>
