@@ -1,10 +1,10 @@
 import MetaTags from './../MetaTags'
 import LinkTags from './../link/LinkTags'
 
-export default function HeadContent() {  
+export default function HeadContent(props) {  
   return (
     <>
-      <MetaTags title="タイトル" description="ディスクリプション" />
+      <MetaTags {...props} />
       <LinkTags />
     </>
   );
