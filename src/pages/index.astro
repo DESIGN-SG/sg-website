@@ -1,7 +1,10 @@
 ---
-import MyFirstReact from '../components/MyFirstReact';
-import MySecondReact from '../components/MySecondReact';
-import MyThirdReact from '../components/MyThirdReact';
+import {
+  MyFirstReact,
+  MySecondReact,
+  MyThirdReact,
+	MyFourthReact
+} from '../components';
 ---
 
 <html lang="ja">
@@ -17,6 +20,7 @@ import MyThirdReact from '../components/MyThirdReact';
 			<!-- <MySecondReact>第二章</MySecondReact> -->
 			<MyThirdReact buttonLabel="クリック" messageText="どうも" client:load />
 			<MyThirdReact buttonLabel="押す" messageText="こんちわ" client:load />
+			<MyFourthReact />
 		</main>
 	</body>
 </html>

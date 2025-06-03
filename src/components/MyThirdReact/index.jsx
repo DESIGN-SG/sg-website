@@ -14,3 +14,20 @@ const [text, setMessage] = useState('');
     </>
   ); 
 }
+
+// import { useState } from "react";
+
+// export default function MyThirdReact (props) {
+// const [text, setMessage] = useState('');
+
+//   return (
+//     <>
+//       <p>{text}</p>
+//       <input
+//       type="button"
+//       value={props.buttonLabel}
+//       onClick={() => setMessage(props.messageText)}
+//       />
+//     </>
+//   ); 
+// }

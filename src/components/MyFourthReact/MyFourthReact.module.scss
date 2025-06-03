@@ -1,0 +1,18 @@
+.message {
+  color: red;
+  &:hover {
+    color: blue;
+  }
+}
+.message-text {
+  color: green;
+}
+.large {
+  font-size: 20px;
+}
+.noon {
+  color: red;
+}
+.night {
+  color: blue;
+}
