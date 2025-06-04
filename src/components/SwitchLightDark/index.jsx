@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from './SwitchLightDark.module.scss';
 
 export default function SwitchLightDark() {
   const [check_state, setState] = useState(false);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = check_state ? "#444" : "#fff";
+  }, [check_state]);
+
   const handleChange = () => {
     setState(prev => !prev);
-    if (check_state === true) {
-      body.setAttribute("style", "background-color: #444;")
-    }else {
-      body.setAttribute("style", "background-color: #fff;")
-    }
   };
 
   return (
