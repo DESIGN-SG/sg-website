@@ -5,7 +5,9 @@ import {
   MyThirdReact,
 	MyFourthReact,
 	HeadContent,
+	SwitchLightDark
 } from '../components';
+import '../styles/global.scss';
 ---
 
 <html lang="ja">
@@ -13,9 +15,6 @@ import {
 		<meta name="generator" content={Astro.generator} />
 		<HeadContent title="タイトル" description="ディスクリプション" />
 	</head>
-	<style>
-		.material-symbols-outlined{font-variation-settings:FILL 0,wght 400,GRAD 0,opsz 16;}
-	</style>
 	<body>
 		<main>
 			<!-- <MyFirstReact client:load /> -->
@@ -24,7 +23,8 @@ import {
 			<MyThirdReact buttonLabel="クリック" messageText="どうも" client:load />
 			<MyThirdReact buttonLabel="押す" messageText="こんちわ" client:load />
 			<MyFourthReact />
-			<p><span class="material-symbols-outlined">keyboard_arrow_down</span></p>
+			<p><span class="material-symbols-outlined">favorite</span></p>
+			<SwitchLightDark />
 		</main>
 	</body>
 </html>
