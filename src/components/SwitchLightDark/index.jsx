@@ -2,19 +2,20 @@ import { useState, useEffect } from "react";
 import styles from './SwitchLightDark.module.scss';
 
 export default function SwitchLightDark() {
-  const [check_state, setState] = useState(false);
+  const [colorMode, setColor] = useState(false);
 
   useEffect(() => {
-    document.body.style.backgroundColor = check_state ? "#444" : "#fff";
-  }, [check_state]);
+    document.body.style.backgroundColor = colorMode ? "#444" : "#fff";
+    document.body.style.transition = "background .3s";
+  }, [colorMode]);
 
-  const handleChange = () => {
-    setState(prev => !prev);
+  const toggleColor = () => {
+    setColor(prev => !prev);
   };
 
   return (
     <>
-      <input type="checkbox" checked={check_state} onChange={handleChange} />
+      <input type="checkbox" checked={colorMode} onChange={toggleColor} />
     </>
   );
 }
