@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import styles from './SwitchLightDark.module.scss';
 
-export default function SwitchLightDark() {
+function SwitchLightDark() {
   const [colorMode, setColor] = useState(false);
 
   useEffect(() => {
-    document.body.style.backgroundColor = colorMode ? "#444" : "#fff";
+    document.body.style.backgroundColor = colorMode ? "#444" : "#f7f7f7";
     document.body.style.transition = "background .3s";
   }, [colorMode]);
 
@@ -19,3 +19,5 @@ export default function SwitchLightDark() {
     </>
   );
 }
+
+export default SwitchLightDark;
