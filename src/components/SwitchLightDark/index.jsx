@@ -16,7 +16,10 @@ function SwitchLightDark() {
 
   return (
     <>
-      <input type="checkbox" checked={colorMode} onChange={toggleColor} />
+      <label className={styles.toggle}>
+        <input className={styles.toggle__input} type="checkbox" checked={colorMode} onChange={toggleColor} role="switch" />
+        <span className={styles.toggle__slider}></span>
+      </label>
     </>
   );
 }
