@@ -6,6 +6,7 @@ function SwitchLightDark() {
 
   useEffect(() => {
     document.body.style.backgroundColor = colorMode ? "#444" : "#f7f7f7";
+    document.body.style.color = colorMode ? "#f7f7f7" : "#444";
     document.body.style.transition = "background .3s";
   }, [colorMode]);
 
