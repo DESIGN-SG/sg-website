@@ -6,4 +6,6 @@ export { default as MyFourthReact } from './MyFourthReact';
 //<head>
 export { default as HeadContent } from './head/HeadContent';
 
+export { default as TwoColumnLayout } from '../layout/TwoColumnLayout';
+
 export { default as SwitchLightDark } from './SwitchLightDark';

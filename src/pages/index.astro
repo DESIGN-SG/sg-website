@@ -5,7 +5,8 @@ import {
   MyThirdReact,
 	MyFourthReact,
 	HeadContent,
-	SwitchLightDark
+	SwitchLightDark,
+	TwoColumnLayout
 } from '../components';
 import '../styles/global.scss';
 ---
@@ -16,6 +17,7 @@ import '../styles/global.scss';
 		<HeadContent title="タイトル" description="ディスクリプション" />
 	</head>
 	<body>
+		<TwoColumnLayout client:visible />
 		<main>
 			<!-- <MyFirstReact client:load /> -->
 			<!-- <MySecondReact>第一章</MySecondReact> -->
