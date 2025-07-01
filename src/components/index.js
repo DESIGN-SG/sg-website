@@ -8,4 +8,4 @@ export { default as HeadContent } from './head/HeadContent';
 
 export { default as TwoColumnLayout } from '../layout/TwoColumnLayout';
 
-export { default as SwitchLightDark } from './SwitchLightDark';
+export { default as SwitchLightDark } from './SwitchLightDarkCircle';

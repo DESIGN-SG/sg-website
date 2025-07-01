@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import styles from './SwitchLightDarkCircle.module.scss';
+import styles from './SwitchLightDarkRectangle.module.scss';
 
-function SwitchLightDarkCircle() {
+function SwitchLightDarkRectangle() {
   const [colorMode, setColor] = useState(false);
 
   useEffect(() => {
@@ -24,4 +24,4 @@ function SwitchLightDarkCircle() {
   );
 }
 
-export default SwitchLightDarkCircle;
+export default SwitchLightDarkRectangle;

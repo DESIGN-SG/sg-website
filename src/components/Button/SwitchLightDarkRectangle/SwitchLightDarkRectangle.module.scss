@@ -1,0 +1,68 @@
+$width: 48px;
+$aspect-ratio: 48 / 78;
+$light: #FFBE0C;
+$dark: #166181;
+$focus: #0088c2;
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: $width;
+  height: calc(#{$width} * #{$aspect-ratio});
+  //チェックボックス非表示
+  .toggle__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  //スライダー
+  .toggle__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $light;
+    transition: 0.4s;
+    border-radius: 100vmax;
+    &::before {
+      border-radius: 100vmax;
+      position: absolute;
+      content: "";
+      height: calc( $width * 0.4615 );
+      width: calc( $width * 0.4615 );
+      left: calc( $width * 0.1026 );
+      bottom: calc( $width * 0.0769 );
+      background: #fff;
+      transition: 0.3s;
+    }
+    &::after {
+      position: absolute;
+      font-family: "Material Symbols Outlined";
+      content: "\e430";
+      font-size: calc( $width * 0.2821 );
+      color: $light;
+      left: calc( $width * 0.1923 );
+      bottom: calc( $width * 0.1282 );
+      transition: 0.3s;
+    }
+    //チェックされたときの動き
+    &:is(.toggle__input:checked + *) {
+      background-color: $dark;
+      &:before {
+        transform: translateX(73%);
+      }
+      &::after {
+        content: "\f34f";
+        color: $dark;
+        transform: translateX(122%);
+        transition: 0.3s;
+      }
+    }
+    //フォーカスリング
+    &:is(.toggle__input:focus-visible + *) {
+      outline: 2px solid $focus;
+    }
+  }
+}

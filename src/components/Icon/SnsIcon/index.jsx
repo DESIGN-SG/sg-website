@@ -1,12 +1,12 @@
 import styles from './SnsIcon.module.scss';
 
-function SnsIcon({ linkUrl,iconImage }) {
+function SnsIcon({ linkUrl, iconImage, imgAlt }) {
   return (
-    <div className={styles.IconWrap}>
-      <a href={linkUrl} target="_blank">
-        <img src={iconImage} alt="" />
-      </a>
-    </div>
+    <a href={linkUrl} target="_blank" className={styles.IconWrap}>
+      <span>
+        <img src={iconImage} alt={imgAlt} />
+      </span>
+    </a>
   );
 }
 

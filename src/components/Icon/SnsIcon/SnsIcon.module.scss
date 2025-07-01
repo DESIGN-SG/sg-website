@@ -1,10 +1,16 @@
 .IconWrap {
   width: 48px;
   aspect-ratio: 1 / 1;
-  a {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+  display: grid;
+  place-content: center;
+  span {
+    width: 48px;
+    height: 32px;
     display: grid;
     place-content: center;
+    border-radius: 4px;
+    &:is(.IconWrap:hover *) {
+      background-color: aquamarine;
+    }
   }
 }

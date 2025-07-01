@@ -5,9 +5,16 @@
   gap: 12px;
 }
 
-div:nth-child(2) {
-  background-color: rgb(18, 172, 172);
+.SnsAndSwitch {
+  display: grid;
+  grid-template-columns: auto 90px;
+  gap: 12px;
+  div:nth-child(2) {
+    background-color: #FFBE0C;
+  }
 }
+
+
 
 div:nth-child(3) {
   background-color: rgb(234, 255, 255);
