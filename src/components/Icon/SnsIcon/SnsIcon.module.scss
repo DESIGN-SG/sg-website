@@ -1,0 +1,10 @@
+.IconWrap {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  a {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-content: center;
+  }
+}
