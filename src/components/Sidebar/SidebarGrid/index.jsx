@@ -8,9 +8,12 @@ function SidebarGrid() {
   return (
     <aside className={styles.SidebarGrid}>
       <SidebarTitle />
-      <div className={styles.SnsAndSwitch}><SidebarSns /><div></div></div>
-      <div><SwitchLightDarkRectangle /></div>
-      <div>け</div>
+      <div className={styles.SnsAndSwitch}>
+        <SidebarSns />
+        <div><SwitchLightDarkRectangle /></div>
+      </div>
+      <div></div>
+      <div></div>
     </aside>
   );
 }

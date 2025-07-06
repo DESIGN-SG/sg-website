@@ -6,7 +6,7 @@ function TwoColumnLayout() {
   return (
     <div className={styles.twoColumnGrid}>
       <SidebarGrid />
-      <div>えお</div>
+      <div></div>
     </div>
   );
 }

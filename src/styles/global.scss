@@ -8,9 +8,46 @@
 
 //色
 :root {
-  --c-bg-color: #f7f7f7;
+  //全体の背景色
+  --c-bg-common: #f2f2f2;
+
+  /* サイドバー */
+  //メインbg
+  --c-sidebar-main-bg: #fff;
+  //メインテキスト
+  --c-sidebar-text: #088197;
+  //border
+  --c-sidebar-boder: #CBEBF4;
+  //box-shadow
+  --c-sidebar-box-shadow: #e3e8e8;
+
+  //SidebarTitle
+  --c-sidebar-title-bg: #01B1C4;
+
+  //SidebarSns - hover
+  --c-sidebar-sns-hover: #e8f6fb;
+}
+
+//
+.dark-mode {
+  //全体の背景色
+  --c-bg-common: #495456;
+
+  /* サイドバー */
+  //メインbg
+  --c-sidebar-main-bg: #384143;
+  //メインテキスト
+  --c-sidebar-text: #dde7e9;
+  //box-shadow
+  --c-sidebar-box-shadow: #424242;
+
+  //SidebarTitle
+  --c-sidebar-title-bg: #006c78;
+
+  //SidebarSns - hover
+  --c-sidebar-sns-hover: #e0a80e;
 }
 
 body {
-  background-color: var(--c-bg-color);
+  background-color: var(--c-bg-common);
 }

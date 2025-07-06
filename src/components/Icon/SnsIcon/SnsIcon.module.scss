@@ -5,9 +5,20 @@
   place-content: center;
   span {
     width: 48px;
-    height: 32px;
+    height: 40px;
     display: grid;
     place-content: center;
     border-radius: 4px;
   }
+  img {
+    transition: filter 0.3s;
+  }
+}
+
+//ダークモード
+:global(body.dark-mode) .IconWrap img {
+  filter: grayscale(1) brightness(3);
+}
+:global(body.dark-mode) li:hover .IconWrap img {
+  filter: none;
 }
