@@ -4,4 +4,38 @@
   align-items: center;
   border-radius:6px;
   background-color: #fff;
+  li {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
 }
+
+/*--------- マグネット -------*/
+//下準備
+.SnsWrapper {
+  anchor-scope: --item-1 --item-2 --item-3;
+  position: relative;
+}
+
+//マグネットする要素
+.SnsWrapper::before {
+  content: '';
+  position: absolute;
+  background: rgb(232, 246, 251);
+  border-radius: 4px;
+  // z-index: -1;
+  width: anchor-size(var(--active) width);
+  height: anchor-size(var(--active) height);   
+  left: anchor(var(--active) left);
+  top: anchor(var(--active) top);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+//hoverしたときにマグネットする要素が出現
+.SnsWrapper:has(li:nth-child(1):hover) { --active: --item-1; }
+.SnsWrapper:has(li:nth-child(2):hover) { --active: --item-2; }
+.SnsWrapper:has(li:nth-child(3):hover) { --active: --item-3; }
