@@ -1,0 +1,71 @@
+.SidebarNav {
+  li {
+    width: 100%;
+    position: relative;
+    //リスト内区切り線
+    &:not(:first-of-type)::after {
+      content: "";
+      width: 80%;
+      height: 1px;
+      background-color: var(--c-sidebar-border);
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+    &:hover::after,
+    &:hover + li::after
+     {
+      opacity: 0;
+    }
+  }
+  a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    padding-block: 20px;
+    padding-inline: 40px;
+    &::after {
+      font-family: "Material Symbols Outlined";
+      content: "\e941";
+      font-size: 20px;
+    }
+  }
+}
+
+
+/*--------- マグネット -------*/
+//下準備
+.SidebarNav {
+  position: relative;
+}
+@for $i from 1 through 5 {
+  .SidebarNav li:nth-child(#{$i}) a {
+    anchor-name: --item-#{$i};
+  }
+}
+
+//マグネットする要素
+.SidebarNav::before {
+  content: '';
+  position: absolute;
+  background: var(--c-sidebar-sns-hover);
+  border-radius: 4px;
+  // z-index: -1;
+  width: anchor-size(var(--active) width);
+  height: anchor-size(var(--active) height);   
+  left: anchor(var(--active) left);
+  top: anchor(var(--active) top);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+//hoverしたときにマグネットする要素が出現
+@for $i from 1 through 5 {
+  .SidebarNav:has(li:nth-child(#{$i}):hover) {
+    --active: --item-#{$i};
+  }
+}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import SwitchLightDarkRectangle from "../../Button/SwitchLightDarkRectangle"
 import SidebarTitle from "../SidebarTitle";
 import SidebarSns from "../SidebarSns";
+import SidebarNav from "../SidebarNav";
 import styles from './SidebarGrid.module.scss';
 
 function SidebarGrid() {
@@ -12,7 +13,7 @@ function SidebarGrid() {
         <SidebarSns />
         <div><SwitchLightDarkRectangle /></div>
       </div>
-      <div></div>
+      <nav><SidebarNav /></nav>
       <div></div>
     </aside>
   );
