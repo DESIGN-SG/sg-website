@@ -1,8 +1,21 @@
 .twoColumnGrid {
   display: grid;
   grid-template-columns: 300px auto;
+  height: 100vh;
   aside {
     padding: 20px;
     padding-right: 0;
+    overflow-y: auto;
+    height: 100vh;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar{
+      display:none;
+    }
+  }
+  main {
+    overflow-y: auto;
+    height: 100vh;
+    color: var(--c-text-common);
   }
 }

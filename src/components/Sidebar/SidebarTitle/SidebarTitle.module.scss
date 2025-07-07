@@ -2,4 +2,25 @@
   border-radius: 6px;
   background-color: var(--c-sidebar-title-bg);
   box-shadow: 0px 0px 17px -2px var(--c-sidebar-box-shadow);
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: '';
+    width: 110%;
+    height: 110%;
+    background-image: url(../../../../public/logo/logo_white.png);
+    background-repeat: no-repeat;
+    top: 32%;
+    left: 36%;
+    background-size: 50%;
+    position: absolute;
+    transform: scale(1.5) rotate(8deg);
+    transform-origin: center;
+  }
+}
+
+//ダークモード
+:global(body.dark-mode) .ImgWrapper::before {
+  background-image: url(../../../../public/logo/logo.png);
+
 }

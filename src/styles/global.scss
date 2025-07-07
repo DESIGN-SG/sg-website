@@ -10,6 +10,8 @@
 :root {
   //全体の背景色
   --c-bg-common: #f2f2f2;
+  //メインテキスト
+  --c-text-common: #444;
 
   /* サイドバー */
   //メインbg
@@ -32,6 +34,8 @@
 .dark-mode {
   //全体の背景色
   --c-bg-common: #495456;
+  //メインテキスト
+  --c-text-common: #dcdcdc;
 
   /* サイドバー */
   //メインbg
