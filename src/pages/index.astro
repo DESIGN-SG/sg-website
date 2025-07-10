@@ -1,31 +1,8 @@
 ---
-import {
-  MyFirstReact,
-  MySecondReact,
-  MyThirdReact,
-	MyFourthReact,
-	HeadContent,
-	TwoColumnLayout
-} from '../components';
+import BaseLayout from '../layout/BaseLayout.astro';
 import '../styles/global.scss';
 ---
 
-<html lang="ja">
-	<head>
-		<meta name="generator" content={Astro.generator} />
-		<HeadContent title="トップページ" description="トップページです" />
-	</head>
-	<body>
-		<TwoColumnLayout client:visible>
-			ああああ
-			<!-- <MyFirstReact client:load /> -->
-			<!-- <MySecondReact>第一章</MySecondReact> -->
-			<!-- <MySecondReact>第二章</MySecondReact> -->
-			<!-- <MyThirdReact buttonLabel="クリック" messageText="どうも" client:load />
-			<MyThirdReact buttonLabel="押す" messageText="こんちわ" client:load />
-			<MyFourthReact />
-			<p><span class="material-symbols-outlined">favorite</span></p> -->
-		</TwoColumnLayout>
-
-	</body>
-</html>
+<BaseLayout>
+		ああああ
+</BaseLayout>

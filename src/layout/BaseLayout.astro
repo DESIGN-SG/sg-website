@@ -1,0 +1,20 @@
+---
+import {
+    HeadContent,
+    TwoColumnLayout
+} from '../components';
+import '../styles/global.scss';
+const { title, description } = Astro.props;
+---
+
+<html lang="ja">
+	<head>
+		<meta name="generator" content={Astro.generator} />
+		<HeadContent title={title} description={description} />
+	</head>
+	<body>
+		<TwoColumnLayout client:visible>
+            <slot />
+        </TwoColumnLayout>
+	</body>
+</html>

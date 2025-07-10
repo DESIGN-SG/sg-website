@@ -1,19 +1,8 @@
 ---
-import {
-    HeadContent,
-    TwoColumnLayout
-} from '../components';
+import BaseLayout from '../layout/BaseLayout.astro';
 import '../styles/global.scss';
 ---
 
-<html lang="ja">
-	<head>
-		<meta name="generator" content={Astro.generator} />
-		<HeadContent title="About" description="Aboutページです" />
-	</head>
-	<body>
-		<TwoColumnLayout client:visible>
-            マッ
-        </TwoColumnLayout>
-	</body>
-</html>
+<BaseLayout>
+	マ？
+</BaseLayout>
