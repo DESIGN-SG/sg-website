@@ -9,7 +9,7 @@
     content: '';
     width: 110%;
     height: 110%;
-    background-image: url(../../../../public/logo/logo_white.png);
+    background-image: url(/logo/logo_white.png);
     background-repeat: no-repeat;
     top: 32%;
     left: 36%;
@@ -25,6 +25,6 @@
 
 //ダークモード
 :global(body.dark-mode) .ImgWrapper::before {
-  background-image: url(../../../../public/logo/logo.png);
+  background-image: url(/logo/logo.png);
 
 }
