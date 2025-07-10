@@ -13,11 +13,11 @@ import '../styles/global.scss';
 <html lang="ja">
 	<head>
 		<meta name="generator" content={Astro.generator} />
-		<HeadContent title="タイトル" description="ディスクリプション" />
+		<HeadContent title="トップページ" description="トップページです" />
 	</head>
 	<body>
-		<TwoColumnLayout client:visible />
-		<main>
+		<TwoColumnLayout client:visible>
+			ああああ
 			<!-- <MyFirstReact client:load /> -->
 			<!-- <MySecondReact>第一章</MySecondReact> -->
 			<!-- <MySecondReact>第二章</MySecondReact> -->
@@ -25,6 +25,7 @@ import '../styles/global.scss';
 			<MyThirdReact buttonLabel="押す" messageText="こんちわ" client:load />
 			<MyFourthReact />
 			<p><span class="material-symbols-outlined">favorite</span></p> -->
-		</main>
+		</TwoColumnLayout>
+
 	</body>
 </html>
